@@ -1,0 +1,32 @@
+---
+label: Post
+hide_body: false
+fields:
+- type: text
+  name: template
+  label: template
+- type: text
+  name: title
+  label: title
+- type: text
+  name: status
+  label: status
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: featuredImage
+  label: featuredImage
+- type: textarea
+  name: excerpt
+  label: excerpt
+- type: field_group
+  name: meta
+  label: meta
+  fields:
+  - type: text
+    name: description
+    label: description
+  - type: text
+    name: title
+    label: title
