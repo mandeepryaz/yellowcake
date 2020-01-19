@@ -4,9 +4,33 @@ auto_deploy: false
 admin_path: static/admin
 webhook_url: 
 sections:
+- type: heading
+  label: Content
+- type: directory
+  path: src/pages
+  label: Pages
+  create: documents
+  match: "*.md"
+  new_doc_ext: md
+  templates:
+  - page
+  - blocks-page
+- type: directory
+  path: src/pages/posts
+  label: Posts
+  create: documents
+  match: "**/*"
+  new_doc_ext: md
+  templates:
+  - post
+- type: heading
+  label: Config
 - type: document
-  path: ''
-  label: Document
+  path: src/data/main_menu.json
+  label: Nav Menu
+- type: document
+  path: site-config.json
+  label: Site Config
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
